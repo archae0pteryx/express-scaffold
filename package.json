@@ -6,13 +6,15 @@
   "license": "MIT",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
+    "dev": "nodemon -r dotenv/config src/index.js",
+    "debug": "node -r dotenv/config --inspect src/index.js",
     "test": "jest src/",
     "test:watch": "jest --watchAll src/",
     "lint": "eslint 'src/**/*.{js,jsx}' --quiet",
     "pretty": "prettier 'src/**/*.{js,html}' --write"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "eslint": "^6.8.0",
     "express": "^4.17.1",
     "morgan": "^1.9.1"
