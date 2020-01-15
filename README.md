@@ -1,3 +1,3 @@
 # Express Scaffold
 
-I'm tired of writting this over and over.
+I'm tired of writing this over and over.
