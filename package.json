@@ -8,14 +8,20 @@
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
     "test": "jest src/",
-    "test:watch": "jest --watchAll src/"
+    "test:watch": "jest --watchAll src/",
+    "lint": "eslint 'src/**/*.{js,jsx}' --quiet",
+    "pretty": "prettier 'src/**/*.{js,html}' --write"
   },
   "dependencies": {
+    "eslint": "^6.8.0",
     "express": "^4.17.1",
     "morgan": "^1.9.1"
   },
   "devDependencies": {
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-jest": "^23.6.0",
     "jest": "^24.9.0",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1"
   }
 }

@@ -1,6 +1,5 @@
-module.exports = (app) => {
-  app.route('/')
-    .get((req, res) => {
-      res.send('ok')
-    })
+module.exports = app => {
+  app.route('/').get((req, res) => {
+    res.send('ok')
+  })
 }
