@@ -1,5 +1,13 @@
+const express = require('express')
+
 module.exports = app => {
-  app.route('/').get((req, res) => {
-    res.send('ok')
+  const apiRouter = express.Router()
+
+  require('./heartbeat')(apiRouter)
+
+  app.use('/api', apiRouter)
+
+  app.get('*', (req, res) => {
+    res.send('bad route')
   })
 }
